@@ -1,6 +1,18 @@
 micronaut:
   application:
     name: webmetricsbug
+  server:
+    port: 7890
+  metrics:
+    enabled: true
+    binders:
+      web:
+        enabled: true
+endpoints:
+  metrics:
+    enabled: true
+    sensitive: false
+
 netty:
   default:
     allocator:
